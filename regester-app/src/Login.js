@@ -5,13 +5,12 @@ import "./signup.css";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-   const [name , setName] = useState("");
   const navigate = useNavigate();
 
   const handelSubmit = (e) => {
     e.preventDefault();
     axios
-    .post(`${process.env.REACT_APP_API_URL}/login/log`, { email, password })
+      .post(`${process.env.REACT_APP_API_URL}/login/log`, { email, password })
       .then((result) => {
         if (result.data.message === "invalid password") {
           alert("Invalid password cheack your password or try to reset it");
@@ -40,7 +39,9 @@ function Login() {
 
         <form className="w-[100%]" onSubmit={handelSubmit}>
           <div className="w-[80%] flex flex-col mx-auto">
-            <label  className="font-bold text-xl" htmlFor="email">Email</label>
+            <label className="font-bold text-xl" htmlFor="email">
+              Email
+            </label>
             <input
               className="h-[30px] w-full outline-0 rounded-2xl placeholder:px-6 placeholder:shadow-md outline-blue-400 border-0 text-black"
               id="email"
@@ -55,7 +56,9 @@ function Login() {
           </div>
 
           <div className="w-[80%] flex flex-col mx-auto">
-            <label  className="font-bold text-xl" htmlFor="password">Password</label>
+            <label className="font-bold text-xl" htmlFor="password">
+              Password
+            </label>
             <input
               className="h-[30px] w-full outline-0 rounded-2xl placeholder:px-6 placeholder:shadow-md outline-blue-400 border-0 text-black"
               id="password"

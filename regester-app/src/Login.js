@@ -11,7 +11,7 @@ function Login() {
   const handelSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/login/log", { email, password })
+    .post(`${process.env.REACT_APP_API_URL}/login/log`, { email, password })
       .then((result) => {
         if (result.data.message === "invalid password") {
           alert("Invalid password cheack your password or try to reset it");

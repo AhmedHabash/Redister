@@ -12,7 +12,7 @@ function Signup() {
   const handelSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/register", { name, email, password })
+      .post(`${process.env.REACT_APP_API_URL}/register`, { name, email, password })
       .then((result) => {
         if(result.data.message === 'name and email and password is required'){
           alert(result.data.message)

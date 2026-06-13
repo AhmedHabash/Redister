@@ -1,10 +1,17 @@
-import React from 'react'
+import Nav from '../src/Navbar/Nav'
+import Land from './land/Land'
+import Footer from './Footer/Footer'
+import Data from './Meals/Data'
+
 
 
 function Home() {
   return (
     <div>
-      home page 
+      <Nav/>
+      <Land/>
+      <Data/>
+      <Footer/>
     </div>
   )
 }

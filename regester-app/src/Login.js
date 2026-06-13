@@ -34,15 +34,15 @@ function Login() {
   };
 
   return (
-    <div className="w-full h-screen  bg-img flex justify-center items-center bg-blue-300 text-white capitalize">
-      <div className="w-[600px]">
+    <div className="w-full h-screen  bg-img flex justify-center items-center text-white capitalize">
+      <div className="w-[600px]  bg-purple-500 py-6 rounded-2xl shadow-xl shadow-gray-600">
         <h1 className="text-center text-2xl font-bold">Log In</h1>
 
         <form className="w-[100%]" onSubmit={handelSubmit}>
           <div className="w-[80%] flex flex-col mx-auto">
-            <label htmlFor="email">Email</label>
+            <label  className="font-bold text-xl" htmlFor="email">Email</label>
             <input
-              className="h-[30px] w-full outline-0 outline-orange-400 border-0 text-black"
+              className="h-[30px] w-full outline-0 rounded-2xl placeholder:px-6 placeholder:shadow-md outline-blue-400 border-0 text-black"
               id="email"
               name="email"
               type="email"
@@ -55,9 +55,9 @@ function Login() {
           </div>
 
           <div className="w-[80%] flex flex-col mx-auto">
-            <label htmlFor="password">Password</label>
+            <label  className="font-bold text-xl" htmlFor="password">Password</label>
             <input
-              className="h-[30px] w-full outline-0 outline-orange-400 border-0 text-black"
+              className="h-[30px] w-full outline-0 rounded-2xl placeholder:px-6 placeholder:shadow-md outline-blue-400 border-0 text-black"
               id="password"
               name="password"
               type="password"
@@ -69,7 +69,7 @@ function Login() {
           </div>
 
           <button
-            className="  block w-[100px] mx-auto text-center my-5 bg-indigo-500 py-1 px-3 cursor-pointer"
+            className="  block w-[100px] mx-auto text-center my-5 bg-purple-900 hover:bg-blue-500 font-bold text-xl rounded-2xl py-1 px-3 cursor-pointer"
             type="submit"
           >
             login

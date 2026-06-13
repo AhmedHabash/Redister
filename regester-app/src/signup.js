@@ -32,14 +32,14 @@ function Signup() {
 
   return (
     <div className="w-full h-screen flex justify-center items-center bg-img  text-white capitalize">
-      <div className="w-[600px]  bg-blue-400 py-6">
+      <div className="w-[600px]  bg-purple-500 py-6 rounded-2xl shadow-xl shadow-gray-600">
         <h1 className="text-center text-2xl text-blue-50  font-bold my-5">Register</h1>
 
         <form className="w-[100%] " onSubmit={handelSubmit}>
           <div className="w-[80%] flex flex-col mx-auto">
-            <label htmlFor="name">Name</label>
+            <label className="font-bold text-xl" htmlFor="name">Name</label>
             <input
-              className="h-[30px] w-full outline-0 outline-orange-400 border-0 text-black"
+              className="h-[30px] w-full outline-0 outline-blue-400 border-0 rounded-2xl placeholder:px-6 placeholder:shadow-md text-black"
               id="name"
               name="name"
               type="text"
@@ -53,9 +53,9 @@ function Signup() {
           </div>
 
           <div className="w-[80%] flex flex-col mx-auto">
-            <label htmlFor="email">Email</label>
+            <label className="font-bold text-xl" htmlFor="email">Email</label>
             <input
-              className="h-[30px] w-full outline-0 outline-orange-400 border-0 text-black"
+              className="h-[30px] w-full outline-0 rounded-2xl placeholder:px-6 placeholder:shadow-md outline-blue-400 border-0 text-black"
               id="email"
               name="email"
               type="email"
@@ -69,9 +69,9 @@ function Signup() {
           </div>
 
           <div className="w-[80%] flex flex-col mx-auto">
-            <label htmlFor="password">Password</label>
+            <label className="font-bold text-xl" htmlFor="password">Password</label>
             <input
-              className="h-[30px] w-full outline-0 outline-orange-400 border-0 text-black"
+              className="h-[30px] w-full outline-0 rounded-2xl placeholder:px-6 placeholder:shadow-md outline-blue-400 border-0 text-black"
               id="password"
               name="password"
               required
@@ -84,18 +84,18 @@ function Signup() {
           </div>
 
           <button
-            className=" block w-[100px] mx-auto text-center my-5 bg-indigo-500 py-1 px-3 m cursor-pointer"
+            className=" block w-[100px] mx-auto text-center my-5 bg-purple-900 hover:bg-blue-500 font-bold text-xl rounded-2xl py-1 px-3 m cursor-pointer"
             type="submit"
           >
             Register
           </button>
         </form>
 <div className="w-[80%] flex justify-center items-center gap-2 mx-auto">
-          <p className=" text-blue-50  text-gray-700">
+          <p className=" text-blue-50  text-white">
           Already have an account?
         </p>
 
-        <Link className="text-blue-50 block text-center bg-indigo-500 py-1 px-3 cursor-pointer" to="/login">
+        <Link className="text-blue-50 block text-center rounded-2xl bg-purple-900 hover:bg-blue-500 font-bold text-xl py-1 px-3 cursor-pointer" to="/login">
           Login
         </Link>
 </div>

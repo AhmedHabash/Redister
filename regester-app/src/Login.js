@@ -24,7 +24,7 @@ function Login() {
         }
         if (result.data.message === "login successful") {
           alert("login successful");
-          setName(result.data.user.name);
+          
           navigate("/home");
           return;
         }
